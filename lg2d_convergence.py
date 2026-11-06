@@ -230,5 +230,7 @@ if __name__ == "__main__":
     H = [15000.0, 7500.0, 3750.0, 1875.0]  # mesh spacing for each file
     #H = [15000.0, 7500.0, 3750.0]  # mesh spacing for each file
 
-    for name, paths in FILES.items():
-        run_convergence_study(paths, H, DATA, T_FINAL, output=f"convergence_{name}.png", show=False)
+    # for name, paths in FILES.items():
+    #     run_convergence_study(paths[:2], H[:2], DATA, T_FINAL, output=f"convergence_{name}.png", show=False)
+
+    run_convergence_study(FILES["jump_llf"][:2], H[:2], DATA, T_FINAL, output=False, show=True)
